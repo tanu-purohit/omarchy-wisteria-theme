@@ -1,38 +1,55 @@
 return {
 	{
-		"bjarneo/aether.nvim",
-		branch = "v2",
-		name = "aether",
+		"projekt0n/github-nvim-theme",
+		name = "github-theme",
+		lazy = false,
 		priority = 1000,
-		opts = {
-			transparent = true,
-			colors = {
-				bg = "#f0edf8",
-				bg_dark = "#e8e2f5",
-				bg_highlight = "#d4cce8",
-				fg = "#1a0f30",
-				fg_dark = "#2d1f4e",
-				comment = "#8878a8",
-				red = "#a0304a",
-				orange = "#5a3200",
-				yellow = "#6b2a8a",
-				green = "#0d3d1f",
-				cyan = "#063040",
-				blue = "#9b72cf",
-				purple = "#0e2d7a",
-				magenta = "#8a2a5a",
-			},
-		},
-		config = function(_, opts)
-			require("aether").setup(opts)
-			vim.cmd.colorscheme("aether")
-			require("aether.hotreload").setup()
+		config = function()
+			require("github-theme").setup({
+				options = {
+					transparent = true,
+					italic_comments = true,
+				},
+				palettes = {
+					github_light = {
+						canvas = {
+							default = "#f0edf8",
+							overlay = "#e8e2f5",
+							inset = "#e8e2f5",
+							subtle = "#d4cce8",
+						},
+						fg = {
+							default = "#1a0f30",
+							muted = "#8878a8",
+							subtle = "#6b4fa0",
+							onEmphasis = "#f0edf8",
+						},
+						blue = {
+							base = "#9b72cf",
+							bright = "#b08ae0",
+						},
+						purple = {
+							base = "#6b2a8a",
+							bright = "#8a3aaa",
+						},
+					},
+				},
+				specs = {},
+				groups = {
+					github_light = {
+						["LazyH1"] = { fg = "#9b72cf", bold = true },
+						["LazySpecial"] = { fg = "#9b72cf" },
+						["Title"] = { fg = "#9b72cf", bold = true },
+					},
+				},
+			})
+			vim.cmd("colorscheme github_light")
 		end,
 	},
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "aether",
+			colorscheme = "github_light",
 		},
 	},
 }
