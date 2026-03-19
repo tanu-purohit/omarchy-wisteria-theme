@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  --w-bg: #f0edf8;
+  --w-fg: #1a0f30;
+  --w-accent: #9b72cf;
+  --w-accent-light: #c9b8e8;
+  --w-secondary: #e8e2f5;
+  --w-dark: #6b4fa0;
+  --w-soft: #b08ae0;
+  --w-teal: #0e5a68;
+  --w-warm: #7a4a00;
+  --w-white: #ffffff;
+
+  --ud-bg-primary: var(--w-bg);
+  --ud-bg-secondary: var(--w-secondary);
+  --ud-bg-tertiary: var(--w-accent-light);
+  --ud-bg-hover: rgba(155, 114, 207, 0.12);
+  --ud-bg-active: rgba(155, 114, 207, 0.22);
+  --ud-bg-selected: rgba(155, 114, 207, 0.30);
+  --ud-bg-mention: linear-gradient(90deg, rgba(155, 114, 207, 0.20) 0%, rgba(240, 237, 248, 0.1) 100%);
+
+  --ud-text-primary: #1a0f30;
+  --ud-text-secondary: #2d1f4e;
+  --ud-text-muted: #6b4fa0;
+  --ud-text-inverse: var(--w-bg);
+
+  --ud-accent: var(--w-accent);
+  --ud-accent-hover: #8660c0;
+  --ud-accent-soft: rgba(155, 114, 207, 0.55);
+
+  --ud-border: rgba(26, 15, 48, 0.12);
+  --ud-border-subtle: rgba(26, 15, 48, 0.08);
+  --ud-shadow: rgba(26, 15, 48, 0.08);
+
+  --font-primary: "Quicksand", "gg sans", sans-serif;
+  --font-display: "Quicksand", "gg sans", sans-serif;
+}
+
+.theme-light,
+.theme-dark {
+  --background-primary: var(--ud-bg-primary) !important;
+  --background-secondary: var(--ud-bg-secondary) !important;
+  --background-secondary-alt: var(--ud-bg-secondary) !important;
+  --background-tertiary: var(--ud-bg-secondary) !important;
+  --background-accent: var(--ud-bg-tertiary) !important;
+  --background-floating: var(--ud-bg-secondary) !important;
+
+  --background-base-lowest: var(--ud-bg-primary) !important;
+  --background-base-lower: var(--ud-bg-primary) !important;
+  --background-base-low: var(--ud-bg-secondary) !important;
+  --background-base-tertiary: var(--ud-bg-secondary) !important;
+
+  --background-surface-high: var(--ud-bg-secondary) !important;
+  --background-surface-higher: var(--ud-bg-tertiary) !important;
+  --background-surface-highest: var(--w-white) !important;
+  --bg-surface-raised: var(--ud-bg-secondary) !important;
+  --bg-surface-overlay: var(--ud-bg-secondary) !important;
+  --bg-base-secondary: var(--ud-bg-secondary) !important;
+  --bg-base-tertiary: var(--ud-bg-secondary) !important;
+  --bg-overlay-2: var(--ud-bg-secondary) !important;
+  --bg-overlay-3: var(--ud-bg-tertiary) !important;
+
+  --background-modifier-accent: var(--ud-bg-hover) !important;
+  --background-modifier-hover: var(--ud-bg-hover) !important;
+  --background-modifier-active: var(--ud-bg-active) !important;
+  --background-modifier-selected: var(--ud-bg-selected) !important;
+  --background-mentioned: var(--ud-bg-mention) !important;
+  --background-mentioned-hover: linear-gradient(90deg, rgba(155, 114, 207, 0.30) 0%, rgba(240, 237, 248, 0.15) 100%) !important;
+  --mention-background: rgba(155, 114, 207, 0.20) !important;
+  --mention-foreground: var(--ud-text-primary) !important;
+
+  --text-normal: var(--ud-text-primary) !important;
+  --text-muted: var(--ud-text-muted) !important;
+  --text-primary: var(--ud-text-primary) !important;
+  --text-secondary: var(--ud-text-secondary) !important;
+  --header-primary: var(--ud-text-primary) !important;
+  --header-secondary: var(--ud-text-secondary) !important;
+  --interactive-normal: var(--ud-text-primary) !important;
+  --interactive-hover: var(--ud-text-primary) !important;
+  --interactive-active: var(--ud-accent) !important;
+  --interactive-muted: var(--ud-text-muted) !important;
+
+  --channels-default: var(--ud-text-secondary) !important;
+  --channels-default-muted: var(--ud-text-muted) !important;
+  --channels-default-unread: var(--ud-accent) !important;
+
+  --brand-500: var(--ud-accent) !important;
+  --brand-560: var(--ud-accent-soft) !important;
+  --text-link: var(--w-dark) !important;
+  --channel-icon: var(--ud-accent) !important;
+  --focus-primary: var(--ud-accent) !important;
+  --input-border-focus: var(--ud-accent) !important;
+
+  --button-filled-brand-background: var(--ud-accent) !important;
+  --button-filled-brand-background-hover: var(--ud-accent-hover) !important;
+  --button-filled-brand-text: var(--ud-text-inverse) !important;
+
+  --button-positive-background: var(--w-teal) !important;
+  --button-positive-background-hover: #0a4a58 !important;
+  --button-positive-text: var(--w-white) !important;
+
+  --button-secondary-background: var(--ud-bg-tertiary) !important;
+  --button-secondary-background-hover: var(--w-accent-light) !important;
+  --button-secondary-text: var(--ud-text-primary) !important;
+
+  --button-danger-background: #a0304a !important;
+  --button-danger-background-hover: #8a2a3e !important;
+  --button-danger-text: var(--w-white) !important;
+
+  --status-positive: var(--w-teal) !important;
+  --status-warning: var(--w-warm) !important;
+  --status-danger: #a0304a !important;
+
+  --scrollbar-thin-thumb: var(--ud-accent-soft) !important;
+  --scrollbar-thin-track: transparent !important;
+  --scrollbar-auto-thumb: var(--ud-accent) !important;
+  --scrollbar-auto-track: var(--ud-bg-secondary) !important;
+
+  --channeltextarea-background: var(--ud-bg-secondary) !important;
+  --activity-card-background: var(--ud-bg-secondary) !important;
+  --deprecated-card-bg: var(--ud-bg-secondary) !important;
+  --deprecated-card-editable-bg: var(--ud-bg-secondary) !important;
+  --deprecated-store-bg: var(--ud-bg-primary) !important;
+  --deprecated-quickswitcher-input-background: var(--ud-bg-secondary) !important;
+  --deprecated-quickswitcher-input-placeholder: var(--ud-text-muted) !important;
+  --deprecated-text-input-bg: var(--ud-bg-secondary) !important;
+  --deprecated-text-input-border: var(--ud-border) !important;
+  --deprecated-text-input-border-hover: var(--ud-accent) !important;
+  --deprecated-text-input-border-disabled: var(--ud-border-subtle) !important;
+  --deprecated-text-input-prefix: var(--ud-text-secondary) !important;
+}
+
+body {
+  font-family: var(--font-primary) !important;
+}
+
+[class*="messageContent"],
+[class*="markup"] {
+  color: var(--ud-text-primary) !important;
+}
+
+[class*="username"] {
+  color: var(--ud-accent) !important;
+  font-weight: 600 !important;
+}
+
+a[data-list-item-id^="channels___"] {
+  border-radius: 8px !important;
+  margin: 2px 8px !important;
+}
+
+a[data-list-item-id^="channels___"][aria-selected="true"] {
+  background-color: var(--ud-bg-selected) !important;
+  box-shadow: inset 3px 0 0 0 var(--ud-accent) !important;
+}
+
+a[data-list-item-id^="channels___"]:hover {
+  background-color: var(--ud-bg-hover) !important;
+}
+
+a[data-list-item-id^="channels___"] [class*="name"] {
+  color: var(--ud-text-secondary) !important;
+}
+
+a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] {
+  color: var(--ud-accent) !important;
+  font-weight: 600 !important;
+}
+
+a[data-list-item-id^="channels___"][aria-selected="true"] [class*="name"] {
+  color: var(--ud-accent) !important;
+}
+
+[class*="wrapper"][class*="guilds"] {
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="listItem"] [class*="wrapper"] {
+  border-radius: 12px !important;
+}
+
+[class*="listItem"]:hover [class*="wrapper"] {
+  background-color: var(--ud-bg-hover) !important;
+}
+
+[class*="unread"],
+[class*="unreadBar"],
+[class*="numberBadge"],
+[class*="textBadge"] {
+  background-color: var(--ud-accent) !important;
+  color: var(--ud-text-inverse) !important;
+}
+
+[class*="mention"] {
+  background-color: var(--ud-accent-soft) !important;
+  color: var(--ud-text-primary) !important;
+  border-radius: 4px !important;
+  padding: 1px 4px !important;
+}
+
+[class*="mention"]:hover {
+  background-color: var(--ud-accent) !important;
+  color: var(--ud-text-inverse) !important;
+}
+
+[class*="messageListItem"]:hover,
+[class*="messageListItem"]:hover > [class*="message"] {
+  background-color: var(--ud-bg-hover) !important;
+  border-radius: 8px !important;
+}
+
+[class*="replying"] {
+  background-color: var(--ud-bg-mention) !important;
+  border-left: 3px solid var(--ud-accent) !important;
+  border-radius: 8px !important;
+}
+
+[class*="channelTextArea"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 12px !important;
+}
+
+[class*="channelTextArea"]:focus-within {
+  box-shadow: 0 0 0 2px var(--ud-accent-soft) !important;
+}
+
+[class*="scrollableContainer"] {
+  background-color: transparent !important;
+}
+
+[class*="searchBar"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 8px !important;
+}
+
+input,
+textarea {
+  color: var(--ud-text-primary) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ud-text-muted) !important;
+}
+
+[class*="menu"],
+[class*="popout"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px var(--ud-shadow) !important;
+}
+
+[class*="item"]:hover {
+  background-color: var(--ud-bg-hover) !important;
+}
+
+[class*="tooltip"] {
+  background-color: var(--ud-accent) !important;
+  color: var(--ud-text-inverse) !important;
+  border-radius: 6px !important;
+}
+
+[class*="sidebarRegion"] {
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="contentRegion"] {
+  background-color: var(--ud-bg-primary) !important;
+}
+
+[class*="members"] {
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="member"] {
+  border-radius: 8px !important;
+  margin: 2px 8px !important;
+}
+
+[class*="member"]:hover {
+  background-color: var(--ud-bg-hover) !important;
+}
+
+[class*="embedFull"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 8px !important;
+}
+
+[class*="codeBlock"] {
+  background-color: var(--ud-bg-tertiary) !important;
+  border-radius: 6px !important;
+}
+
+[class*="reaction"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 8px !important;
+}
+
+[class*="reaction"]:hover {
+  background-color: var(--ud-bg-hover) !important;
+}
+
+[class*="reaction"][class*="reactionMe"] {
+  background-color: var(--ud-accent-soft) !important;
+  border-color: var(--ud-accent) !important;
+}
+
+[class*="jumpToPresentBar"] {
+  background-color: var(--ud-accent) !important;
+  color: var(--ud-text-inverse) !important;
+  border-radius: 20px !important;
+  bottom: 16px !important;
+}
+
+[class*="isUnread"] {
+  border-color: var(--ud-accent) !important;
+}
+
+[class*="isUnread"] [class*="content"] {
+  color: var(--ud-accent) !important;
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="spoilerText"] {
+  background-color: var(--ud-bg-tertiary) !important;
+}
+
+[class*="spoilerText"][class*="hidden"] {
+  background-color: var(--ud-accent-soft) !important;
+}
+
+[class*="userPopout"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 16px !important;
+}
+
+[class*="userPopout"] [class*="banner"] {
+  border-radius: 16px 16px 0 0 !important;
+}
+
+button[class*="lookFilled"] {
+  border-radius: 8px !important;
+}
+
+button[class*="lookOutlined"] {
+  border-color: var(--ud-accent) !important;
+  color: var(--ud-accent) !important;
+  border-radius: 8px !important;
+}
+
+button[class*="lookOutlined"]:hover {
+  background-color: var(--ud-accent-soft) !important;
+}
+
+[class*="control"] [class*="checked"] {
+  background-color: var(--ud-accent) !important;
+}
+
+[class*="slider"] [class*="track"] {
+  background-color: var(--ud-bg-tertiary) !important;
+}
+
+[class*="slider"] [class*="barFill"] {
+  background-color: var(--ud-accent) !important;
+}
+
+[class*="slider"] [class*="grabber"] {
+  background-color: var(--ud-accent) !important;
+  border-color: var(--ud-accent) !important;
+}
+
+[class*="emojiPicker"] {
+  background-color: var(--ud-bg-secondary) !important;
+  border-radius: 16px !important;
+}
+
+[class*="emojiPicker"] [class*="header"] {
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="categoryList"] {
+  background-color: var(--ud-bg-tertiary) !important;
+}
+
+[class*="chatContent"] [class*="container"] {
+  background-color: var(--ud-bg-primary) !important;
+}
+
+[class*="spine"] {
+  color: var(--ud-accent-soft) !important;
+}
+
+[class*="privateChannels"],
+[class*="dmList"] {
+  background-color: var(--ud-bg-secondary) !important;
+}
+
+[class*="channel"][class*="private"] [class*="name"],
+[class*="privateChannel"] [class*="name"] {
+  color: #1a0f30 !important;
+}
+
+[class*="homeIcon"],
+[class*="privateChannelsHeaderContainer"] svg,
+[class*="privateChannelsHeaderContainer"] path {
+  color: #1a0f30 !important;
+  fill: #1a0f30 !important;
+}
+
+[class*="privateChannelsHeaderContainer"] {
+  color: #1a0f30 !important;
+}
+
+[class*="channelSectionHeader"],
+[class*="categoryHeader"],
+[class*="containerDefault"] [class*="content"] {
+  color: #1a0f30 !important;
+}
+
+h1, h2, h3,
+[class*="heading"],
+[class*="title"] {
+  color: #1a0f30 !important;
+}
