@@ -1,0 +1,26 @@
+name: Wisteria
+accent: "#9b72cf"
+cursor: "#9b72cf"
+background: "#f0edf8"
+foreground: "#2d1f4e"
+details: lighter
+
+terminal_colors:
+  normal:
+    black:   "#f0edf8"
+    red:     "#c0637a"
+    green:   "#7a9ebf"
+    yellow:  "#b8956a"
+    blue:    "#6db8c4"
+    magenta: "#9b72cf"
+    cyan:    "#8ab4d4"
+    white:   "#2d1f4e"
+  bright:
+    black:   "#d4cce8"
+    red:     "#d4788f"
+    green:   "#8fb8d4"
+    yellow:  "#c9a87a"
+    blue:    "#85ccd6"
+    magenta: "#b08ae0"
+    cyan:    "#a0c8e8"
+    white:   "#4a3570"
