@@ -172,24 +172,8 @@ a[data-list-item-id^="channels___"][aria-selected="true"] [class*="name"] {
   color: var(--ud-accent) !important;
 }
 
-[class*="wrapper"][class*="guilds"] {
-  background-color: var(--ud-bg-secondary) !important;
-}
-
 [class*="listItem"] [class*="wrapper"] {
   border-radius: 12px !important;
-}
-
-[class*="listItem"]:hover [class*="wrapper"] {
-  background-color: var(--ud-bg-hover) !important;
-}
-
-[class*="unread"],
-[class*="unreadBar"],
-[class*="numberBadge"],
-[class*="textBadge"] {
-  background-color: var(--ud-accent) !important;
-  color: var(--ud-text-inverse) !important;
 }
 
 [class*="mention"] {
@@ -249,10 +233,6 @@ textarea::placeholder {
   background-color: var(--ud-bg-secondary) !important;
   border-radius: 12px !important;
   box-shadow: 0 4px 12px var(--ud-shadow) !important;
-}
-
-[class*="item"]:hover {
-  background-color: var(--ud-bg-hover) !important;
 }
 
 [class*="tooltip"] {
